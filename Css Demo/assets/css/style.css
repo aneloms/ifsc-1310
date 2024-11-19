@@ -1,0 +1,175 @@
+/* ------ css-demo --------*/
+
+/* ---- Color Scheme ---- 
+Main Color - #FF7F50 (Coral)
+Accent Color - #FFD700 (Gold)
+Background Color - #282C35 (Dark Grey)
+Text Color - #FAFAFA (Almost White)
+*/
+
+/* ---------------Box Sizing----------------- */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* --------------- Responsive Images ----------------- */
+img {
+  max-width: 100%;
+}
+
+/* --------------- Utility Classes ----------------- */
+
+.container {
+  width: 80%;
+  max-width: 960px;
+  margin: 40px auto;
+}
+
+/* --------------- Global Styles ----------------- */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #282C35;
+  color: #FAFAFA;
+}
+
+/* Bright Header with Gradient and Shadows */
+header.primary {
+  background: linear-gradient(90deg, #FF7F50, #FFD700);
+  color: #282C35;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  padding: 20px 40px;
+  border-bottom: 5px solid #FFD700;
+}
+
+header.primary h1 {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+header.primary h1 a {
+  color: #282C35;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header.primary h1 a:hover {
+  color: #FFD700;
+}
+
+header.primary h2 {
+  font-size: 1.5rem;
+  margin: 5px 0 0;
+}
+
+/* Glow and Gradient for nav Links */
+header.primary nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+header.primary nav ul li {
+  list-style-type: none;
+}
+
+header.primary nav ul li a {
+  color: #FAFAFA;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #FF7F50, #FFD700);
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+  transition: all 0.4s;
+}
+
+header.primary nav ul li a:hover {
+  background: linear-gradient(45deg, #FFD700, #FF7F50);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 25px rgba(255, 127, 80, 0.5);
+  transform: scale(1.1);
+}
+
+/* Bright Posts with Gradient Shadows */
+#blog article.post {
+  background: #FAFAFA;
+  color: #282C35;
+  box-shadow: 0 5px 15px rgba(255, 127, 80, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+#blog article.post:hover {
+  background: #FFD700;
+  color: #282C35;
+  box-shadow: 0 8px 20px rgba(255, 127, 80, 0.8);
+}
+
+/* New Style for Blockquotes with Bright Gradient */
+#practice blockquote {
+  background: linear-gradient(45deg, #FF7F50, #FFD700);
+  color: #282C35;
+  border: 4px solid #FFD700;
+  padding: 20px 40px;
+  margin: 40px 0;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+#practice blockquote cite {
+  display: block;
+  font-size: 0.8rem;
+  color: #FAFAFA;
+}
+
+/* Fun Button Style for Links in .container */
+.container a {
+  padding: 12px 18px;
+  color: #FAFAFA;
+  background-color: #FF7F50;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container a:hover {
+  background-color: #FFD700;
+  color: #282C35;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* Responsive Font Adjustments */
+@media screen and (max-width: 560px) {
+  body {
+      font-size: 0.95rem;
+  }
+  header.primary h1 {
+      font-size: 2.2rem;
+  }
+  header.primary h2 {
+      font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #blog {
+      flex-direction: column;
+
+  }
+}
